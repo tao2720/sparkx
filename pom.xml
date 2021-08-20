@@ -4,13 +4,154 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.kg</groupId>
-    <artifactId>sparkx</artifactId>
+    <groupId>com.kg.sparkx</groupId>
+    <artifactId>sparkx-all</artifactId>
+    <packaging>pom</packaging>
     <version>1.0</version>
+    <modules>
+
+        <module>sparkx-kafka</module>
+
+    </modules>
 
     <properties>
+        <!-- scala版本 -->
+        <scala-version>2.11.8</scala-version>
+
+        <!-- spark版本 -->
+        <spark-version>1.6.2</spark-version>
+
+        <!-- log4j版本 -->
+        <log4j-version>1.2.17</log4j-version>
+
+        <!-- java compiler version-->
+        <java-compiler-version>1.8</java-compiler-version>
+
+        <!-- scala插件版本 -->
+        <scala-tools-version>2.15.2</scala-tools-version>
+
+        <!-- 打包插件版本 -->
+        <assembly-plugin-version>3.2.0</assembly-plugin-version>
+
+        <!-- 2. 项目工程的编码格式 -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <!-- 3. 编译器的版本 -->
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+
+        <!-- mysql jdbc -->
+        <mysql.jdbc.version>5.1.47</mysql.jdbc.version>
+
+
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
+
     </properties>
+
+    <!-- 依赖管理器 : 只在父类中申明，不在父类中引用-->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.scala-lang</groupId>
+                <artifactId>scala-library</artifactId>
+                <version>${scala-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.spark</groupId>
+                <artifactId>spark-core_2.11</artifactId>
+                <version>${spark-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.spark</groupId>
+                <artifactId>spark-sql_2.11</artifactId>
+                <version>${spark-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.spark</groupId>
+                <artifactId>spark-hive_2.11</artifactId>
+                <version>${spark-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.spark</groupId>
+                <artifactId>spark-streaming_2.11</artifactId>
+                <version>${spark-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>log4j</groupId>
+                <artifactId>log4j</artifactId>
+                <version>${log4j-version}</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.jdbc.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <!-- 插件管理器 -->
+        <pluginManagement>
+            <plugins>
+                <!-- 编译器插件 -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <configuration>
+                        <source>${java-compiler-version}</source>
+                        <target>${java-compiler-version}</target>
+                    </configuration>
+                </plugin>
+                <!-- 打包插件 - java -->
+                <plugin>
+                    <artifactId>maven-assembly-plugin</artifactId>
+                    <version>${assembly-plugin-version}</version>
+                    <configuration>
+                        <descriptorRefs>
+                            <!-- 打好的jar以jar-with-dependencies结尾 -->
+                            <descriptorRef>jar-with-dependencies</descriptorRef>
+                        </descriptorRefs>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <id>make-assembly</id>
+                            <phase>package</phase>
+                            <goals>
+                                <goal>single</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+                <!-- scala编译的打包插件 -->
+                <plugin>
+                    <groupId>org.scala-tools</groupId>
+                    <artifactId>maven-scala-plugin</artifactId>
+                    <version>${scala-tools-version}</version>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>compile</goal>
+                                <goal>testCompile</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                    <configuration>
+                        <scalaVersion>${scala-version}</scalaVersion>
+                        <args>
+                            <arg>-target:jvm-1.8</arg>
+                        </args>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 
 </project>

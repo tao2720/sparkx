@@ -1,0 +1,14 @@
+
+bootstrap.servers=qphone01:9092,qphone02:9092,qphone03:9092
+key.serializer=org.apache.kafka.common.serialization.StringSerializer # key的序列器
+value.serializer=org.apache.kafka.common.serialization.StringSerializer # value的序列器
+acks=[0|-1|1|all] ## 消息确认机制
+	0:	不做确认，直管发送消息即可
+	-1|all: 不仅leader需要将数据写入本地磁盘，并确认，还需要同步的等待其它followers进行确认
+	1:只需要leader进行消息确认即可，后期follower可以从leader进行同步
+batch.size=1024 #每个分区内的用户缓存未发送record记录的空间大小
+## 如果缓存区中的数据，没有沾满，也就是仍然有未用的空间，那么也会将请求发送出去，为了较少请求次数，我们可以配置linger.ms大于0，
+linger.ms=10 ## 不管缓冲区是否被占满，延迟10ms发送request
+buffer.memory=10240 #控制的是一个producer中的所有的缓存空间
+retries=0 #发送消息失败之后的重试次数
+
