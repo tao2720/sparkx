@@ -14,34 +14,34 @@
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
-        <kafka-version>1.1.1</kafka-version>
-        <curator-version>2.6.0</curator-version>
+        <kafka.version>1.1.1</kafka.version>
+        <curator.version>2.6.0</curator.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.apache.kafka</groupId>
             <artifactId>kafka-clients</artifactId>
-            <version>${kafka-version}</version>
+            <version>${kafka.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.apache.kafka</groupId>
             <artifactId>kafka-streams</artifactId>
-            <version>${kafka-version}</version>
+            <version>${kafka.version}</version>
         </dependency>
 
 
         <dependency>
             <groupId>org.apache.curator</groupId>
             <artifactId>curator-framework</artifactId>
-            <version>${curator-version}</version>
+            <version>${curator.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.apache.curator</groupId>
             <artifactId>curator-client</artifactId>
-            <version>${curator-version}</version>
+            <version>${curator.version}</version>
         </dependency>
 
     </dependencies>
