@@ -15,5 +15,32 @@
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
+    <dependencies>
+        <!-- 引入公共的common依赖——spark-common -->
+<!--        <dependency>-->
+<!--            <groupId>com.kg.sparkx</groupId>-->
+<!--            <artifactId>sparkx-common</artifactId>-->
+<!--            <version>1.0</version>-->
+<!--        </dependency>-->
 
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-core_2.11</artifactId>
+            <version>2.4.5</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-streaming_2.11</artifactId>
+            <version>2.4.5</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.spark/spark-sql -->
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-sql_2.11</artifactId>
+            <version>2.4.5</version>
+        </dependency>
+
+    </dependencies>
 </project>
