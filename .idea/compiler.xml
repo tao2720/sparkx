@@ -13,10 +13,29 @@
         <module name="sparkx-hdfs" />
         <module name="sparkx-kafka" />
         <module name="sparkx-core" />
-        <module name="sparkx" />
         <module name="sparkx-oracle" />
         <module name="sparkx-hive" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="spark-common" target="1.8" />
+      <module name="spark-core" target="1.8" />
+      <module name="spark-es" target="1.8" />
+      <module name="spark-hbase" target="1.8" />
+      <module name="spark-hdfs" target="1.8" />
+      <module name="spark-hive" target="1.8" />
+      <module name="spark-impala" target="1.8" />
+      <module name="spark-kafka" target="1.8" />
+      <module name="spark-kudu" target="1.8" />
+      <module name="spark-mysql" target="1.8" />
+      <module name="spark-oracle" target="1.8" />
+      <module name="spark-postgresql" target="1.8" />
+      <module name="spark-presto" target="1.8" />
+      <module name="spark-redis" target="1.8" />
+      <module name="spark-sql" target="1.8" />
+      <module name="spark-sqlserver" target="1.8" />
+      <module name="spark-streaming" target="1.8" />
+      <module name="structured-streaming" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
