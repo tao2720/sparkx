@@ -138,4 +138,6 @@ public class CommonConstant implements Serializable {
 
     public final static Double LATITUDE_QF_MIN = 40.060000; //纬度
     public final static Double LATITUDE_QF_MAX = 40.069999; //纬度
+
+
 }
