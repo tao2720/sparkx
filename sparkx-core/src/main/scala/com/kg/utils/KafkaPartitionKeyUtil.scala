@@ -1,7 +1,6 @@
 package com.kg.utils
 
 import java.util
-
 import org.apache.kafka.clients.producer.Partitioner
 import org.apache.kafka.common.Cluster
 

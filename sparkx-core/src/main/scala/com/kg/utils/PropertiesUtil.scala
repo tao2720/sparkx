@@ -1,8 +1,8 @@
 package com.kg.utils
 
-import java.util.Properties
-
 import com.kg.constant.Constant
+
+import java.util.Properties
 
 /**
  * properties的工具类
