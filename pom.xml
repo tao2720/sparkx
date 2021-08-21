@@ -9,11 +9,9 @@
     <packaging>pom</packaging>
     <version>1.0</version>
     <modules>
+        <module>sparkx-core</module>
         <module>sparkx-kafka</module>
         <module>sparkx-mysql</module>
-        <module>sparkx-json</module>
-        <module>sparkx-common</module>
-        <module>sparkx-core</module>
         <module>sparkx-hdfs</module>
         <module>sparkx-hive</module>
     </modules>

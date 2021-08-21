@@ -6,7 +6,6 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="sparkx-json" />
         <module name="sparkx-mysql" />
         <module name="sparkx-hdfs" />
         <module name="sparkx-kafka" />
@@ -33,6 +32,7 @@
       <module name="spark-sqlserver" target="1.8" />
       <module name="spark-streaming" target="1.8" />
       <module name="sparkx-common" target="1.8" />
+      <module name="sparkx-json" target="1.8" />
       <module name="sparkx-oracle" target="1.8" />
       <module name="sparkx-sqlserver" target="1.8" />
       <module name="structured-streaming" target="1.8" />

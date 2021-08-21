@@ -9,6 +9,7 @@
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/sparkx-json/pom.xml" />
         <option value="$PROJECT_DIR$/sparkx-oracle/pom.xml" />
         <option value="$PROJECT_DIR$/sparkx-sqlserver/pom.xml" />
       </set>
