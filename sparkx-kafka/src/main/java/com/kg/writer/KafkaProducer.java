@@ -10,9 +10,6 @@ public class KafkaProducer {
     public static void main(String[] args) throws IOException {
         //0. 申明连接到kafka的配置的url
         Properties props = new Properties();
-//        props.put("bootstrap.servers", "192.168.10.106:9092");
-//        props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");
-//        props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer");
         props.load(KafkaProducer.class.getClassLoader().getResourceAsStream("producer.properties"));
 
         //1. 创建生产者对象

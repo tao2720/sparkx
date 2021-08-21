@@ -4,6 +4,8 @@ import org.apache.spark.sql.SparkSession
 import org.apache.spark.streaming.{Seconds, StreamingContext}
 import org.apache.spark.streaming.dstream.DStream
 
+
+//sql df
 object QuickStart {
   def main(args: Array[String]): Unit = {
     //1. 入口类
