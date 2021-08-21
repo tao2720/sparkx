@@ -7,6 +7,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="sparkx-kafka" />
+        <module name="sparkx-common" />
+        <module name="sparkx-core" />
+        <module name="sparkx-json" />
+        <module name="sparkx-mysql" />
         <module name="sparkx" />
       </profile>
     </annotationProcessing>

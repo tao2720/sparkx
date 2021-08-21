@@ -10,6 +10,10 @@
     <version>1.0</version>
     <modules>
         <module>sparkx-kafka</module>
+        <module>sparkx-mysql</module>
+        <module>sparkx-json</module>
+        <module>sparkx-common</module>
+        <module>sparkx-core</module>
     </modules>
 
     <properties>
@@ -38,6 +42,7 @@
         <!-- mysql jdbc -->
         <mysql.jdbc.version>5.1.47</mysql.jdbc.version>
 
+        <junit.version>4.12</junit.version>
 
     </properties>
 
@@ -86,7 +91,14 @@
                 <artifactId>mysql-connector-java</artifactId>
                 <version>${mysql.jdbc.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+            </dependency>
         </dependencies>
+
     </dependencyManagement>
 
     <build>
