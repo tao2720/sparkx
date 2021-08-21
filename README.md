@@ -5,6 +5,7 @@
 # 技术交流
 
 QQ群
+653268794
 
 <div align=center>
    <img src=img/QQ群.jpg length=800 width=400 />
