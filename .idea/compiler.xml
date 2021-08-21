@@ -9,11 +9,9 @@
         <module name="sparkx-common" />
         <module name="sparkx-json" />
         <module name="sparkx-mysql" />
-        <module name="sparkx-sqlserver" />
         <module name="sparkx-hdfs" />
         <module name="sparkx-kafka" />
         <module name="sparkx-core" />
-        <module name="sparkx-oracle" />
         <module name="sparkx-hive" />
       </profile>
     </annotationProcessing>
@@ -35,6 +33,8 @@
       <module name="spark-sql" target="1.8" />
       <module name="spark-sqlserver" target="1.8" />
       <module name="spark-streaming" target="1.8" />
+      <module name="sparkx-oracle" target="1.8" />
+      <module name="sparkx-sqlserver" target="1.8" />
       <module name="structured-streaming" target="1.8" />
     </bytecodeTargetLevel>
   </component>

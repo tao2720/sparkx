@@ -16,8 +16,6 @@
         <module>sparkx-core</module>
         <module>sparkx-hdfs</module>
         <module>sparkx-hive</module>
-        <module>sparkx-oracle</module>
-        <module>sparkx-sqlserver</module>
     </modules>
 
     <properties>

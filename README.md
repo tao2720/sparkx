@@ -35,7 +35,6 @@ Spark X是基于spark的
 |  PostgreSQL   |        |        |
 |     HDFS      |        |        |
 |     Hive      |        |        |
-|     HBase     |        |        |
 |     Redis     |        |        |
 | ElasticSearch |        |        |
 
