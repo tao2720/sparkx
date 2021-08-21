@@ -23,7 +23,8 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <scala.version>2.11.8</scala.version>
-        <spark.version>1.6.2</spark.version>
+<!--        <spark.version>1.6.2</spark.version>-->
+        <spark.version>2.4.5</spark.version>
         <hadoop.version>2.7.6</hadoop.version>
         <http.version>4.5.3</http.version>
         <dev.path>${basedir}/dev</dev.path>
